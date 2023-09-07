@@ -1,0 +1,64 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #fff;
+}
+header{
+    height: 4rem;
+    background: #f1f1f1;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    font-family: cursive;
+    color: purple;
+}
+
+.section{
+    display: flex;
+}
+
+.section img{ 
+    border-radius: 50%;
+    padding-top: 3rem;
+    padding-left: 4rem;
+}
+.myname{
+    font-size: 4rem;
+    font-family: cursive;
+    padding-top: 8rem;
+    color: purple;
+    padding-left: 1.5rem;
+}
+h5 {
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 14rem;
+  color: purple;
+}
+
+#utcTimePlaceholder{
+    padding-top: 16rem;
+    color: purple;
+    font-size: 1.1rem;
+}
+
+h4{
+    padding-top: 18rem;
+    font-size: 1.5rem;
+    font-family: cursive;
+    color: purple;
+}
+#contact{
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    background: #f1f1f1;
+    color: purple;
+    font-family: cursive;
+    padding: 20px 30px
+}
