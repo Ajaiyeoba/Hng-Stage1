@@ -4,7 +4,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+@media max-with{
+    width: 100%;
+}
 body{
     background: #fff;
 }
@@ -14,12 +16,11 @@ header{
     padding-bottom: 2rem;
     padding-top: 1rem;
     padding-left: 2rem;
-    font-family: cursive;
     color: purple;
 }
 
 .section{
-    display: flex;
+    display:;
 }
 
 .section img{ 
