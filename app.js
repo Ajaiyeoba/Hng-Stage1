@@ -1,22 +1,26 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Function to get the current day of the week
-    function getCurrentDayOfWeek() {
-        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+        function setDayOfWeek() {
+    const dayOfWeekElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
+    const currentDate = new Date();
+    const options = { weekday: 'long' };
+    const formattedDayOfWeek = currentDate.toLocaleDateString(undefined, options);
+    dayOfWeekElement.textContent = formattedDayOfWeek;
+}
+
+function updateClock() {
+    const timeElement = document.querySelector('[data-testid="currentUTCTime"]');
+    const updateClockDisplay = () => {
         const currentDate = new Date();
-        const dayIndex = currentDate.getUTCDay();
-        return daysOfWeek[dayIndex];
-    }
+        const options = { hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
+        const formattedTime = currentDate.toLocaleTimeString(undefined, options);
+        timeElement.textContent = formattedTime;
+    };
 
-    // Function to get the current UTC time in milliseconds
-    function getCurrentUTCTime() {
-        const currentDate = new Date();
-        return currentDate.getTime();
-    }
+    updateClockDisplay();
 
-    // Update placeholders with current data
-    const dayOfWeekPlaceholder = document.getElementById("dayOfWeekPlaceholder");
-    const utcTimePlaceholder = document.getElementById("utcTimePlaceholder");
+    setInterval(updateClockDisplay, 1000);
+}
 
-    dayOfWeekPlaceholder.textContent = getCurrentDayOfWeek();
-    utcTimePlaceholder.textContent = getCurrentUTCTime() + " ms";
-});
+setDayOfWeek();
+updateClock();
+    
