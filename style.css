@@ -54,6 +54,7 @@
     border-radius: 5px;
     color: #4832ed;
     margin-bottom: 10px;
+   text-decoration: none;
   }
   a:hover{
     background-color: #918fff;
