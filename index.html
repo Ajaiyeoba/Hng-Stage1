@@ -1,52 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Stage 1- Profile Card</title>
 </head>
-
 <body>
     <section class="container">
         <img src="john.jpeg" alt="Ajaiyeoba" data-testid="slackDisplayImage">
         <h2 data-testid="slackUserName">Ajaiyeoba</h2>
-        <p data-testid="myTrack">Track: Frontend</p>
+        <p data-testid="myTrack"> Frontend</p>
         <div class="dat">
             <p data-testid="currentDayOfTheWeek"></p>
             <p data-testid="currentUTCTime"></p>
         </div>
-        <a href="https://github.com/Ajaiyeoba/Hng-Stage1" data-testid="githubURL">Github Repository</a></button>
-
+        <button> <a href="https://github.com/Ajaiyeoba/Hng-Stage1" data-testid="githubURL">Github Repository</a></button>
     </section>
 
-
-<script> function setDayOfWeek() {
-    const dayOfWeekElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
-    const currentDate = new Date();
-    const options = { weekday: 'long' };
-    const formattedDayOfWeek = currentDate.toLocaleDateString(undefined, options);
-    dayOfWeekElement.textContent = formattedDayOfWeek;
-}
-
-function updateClock() {
-    const timeElement = document.querySelector('[data-testid="currentUTCTime"]');
-    const updateClockDisplay = () => {
-        const currentDate = new Date();
-        const options = { hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
-        const formattedTime = currentDate.toLocaleTimeString(undefined, options);
-        timeElement.textContent = formattedTime;
-    };
-
-    updateClockDisplay();
-
-    setInterval(updateClockDisplay, 1000);
-}
-
-setDayOfWeek();
-updateClock();
-    </script>
+    <script src="app.js"> </script>
 </body>
 
 </html>
