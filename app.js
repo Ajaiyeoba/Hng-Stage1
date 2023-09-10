@@ -1,5 +1,5 @@
 
-        function setDayOfWeek() {
+function setDayOfWeek() {
     const dayOfWeekElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
     const currentDate = new Date();
     const options = { weekday: 'long' };
