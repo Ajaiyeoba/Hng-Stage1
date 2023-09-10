@@ -50,11 +50,11 @@
   }
   a[data-testid="githubURL"]{
     background-color: #c8c7ff;
-    padding: 4px 15px;
+    padding: 8px 15px;
     border-radius: 5px;
     color: #4832ed;
     margin-bottom: 10px;
-   text-decoration: none;
+    text-decoration: none;
   }
   a:hover{
     background-color: #918fff;
